@@ -34,7 +34,7 @@ export const MultiSelectValue = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { placeholder?: string }
 >(({ className, placeholder, ...props }, ref) => {
-  const { value } = useMultiSelect()
+  const { value, onValueChange } = useMultiSelect()
   return (
     <div
       ref={ref}
